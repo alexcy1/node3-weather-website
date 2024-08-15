@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erruki Weather Forecast</title>
+    <link rel="icon" href="images/weather.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    
+    {{> header}}
+
+    <main class="main-content container">
+        <div class="intro-text">
+            <div class="title-container">
+                <h1>{{title}}</h1>
+                <img src="images/weather.png" alt="Weather Icon" class="title-icon">
+            </div>
+            <p class="subtitle">Use this site to get your weather</p>
+        </div>
+        
+
+        <!-- Weather search form -->
+        <form class="weather-form">
+            <input type="text" id="location" placeholder="Enter location name" class="form-control" autocomplete="on">
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+            <button type="button" id="refresh-button" class="btn btn-secondary ml-2">
+                <i class="fa fa-refresh fa-spin"></i>
+            </button>
+        </form>
+
+        <!-- Weather result section -->
+        <div id="weather-result">
+            <div id="loading-spinner"></div>
+            <p id="weather-location"></p>
+            <p id="weather-forecast"></p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        {{> footermenu }}
+    <div class="container">
+        <p>{{> footer}} <span id="current-date"></span></p>
+    </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="icon" href="images/weather.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    {{> header}}
+
+    <main class="main-content container">
+        <div class="help-container">
+            <img src="images/help.png" alt="Help Icon" class="title-icon">
+            <br><br>
+            <h2>{{help_text}}</h2>
+            <p>
+                To get the most accurate weather forecast, you can enter your address, state, city, or even your zip code. 
+                Simply type in the location information, and our app will provide you with up-to-date weather data.
+            </p>
+            <hr>
+            <p>
+                If you need further assistance or have any questions, feel free to refer to this guide or contact support.
+            </p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        {{> footermenu }}
+    <div class="container">
+        <p>{{> footer}} <span id="current-date"></span></p>
+    </div>
+    </footer>
+
+</body>
+</html>

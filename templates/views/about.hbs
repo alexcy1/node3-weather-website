@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/weather.png">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    
+    {{> header}}
+    
+    <main class="main-content container">
+        <div class="about-intro-text">
+            <h2>{{title}}</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hi, I’m Alexander Cyril, a passionate developer with expertise across various technologies. 
+                        My journey in software development has equipped me to tackle complex challenges and deliver 
+                        high-quality solutions.
+                    </p>
+                
+                    <br>
+                    <b>Technical Expertise:</b>
+                    <p>
+                        Proficient in Python, JavaScript, C#, and .NET, I adapt to different programming paradigms 
+                        to leverage the strengths of each language for diverse applications.
+                    </p>
+                
+                    <br>
+                    <b>Frameworks and Technologies:</b>
+                    <p>
+                        <b>Python/Django:</b> Building robust web applications and APIs with a focus on simplicity and rapid development.
+                        <b>JavaScript/Node.js:</b> Creating dynamic web applications, including server-side development.
+                        <b>C#/.NET:</b> Developing enterprise-level applications with a focus on performance and scalability.
+                        <b>Angular:</b> Building modern, single-page applications with an emphasis on user experience.
+                    </p>
+                
+                    <br>
+                    
+                    <p>
+                        Expertise in PostgreSQL, Oracle, MySQL, and MariaDB, with a strong focus 
+                        on database design and optimization.
+                    
+                    <b>Software Architecture:</b>
+                        Skilled in automating tasks and designing scalable architectures, 
+                        including microservices and monolithic systems.
+                    
+                        <b>I am committed to continuous learning and staying updated with the latest trends in the tech landscape. 
+                            I strive to bring innovation and excellence to every project I undertake.</b>
+                   
+                </div>
+                
+                <div class="about-image">
+                    <img class="portrait" src="images/sanchez.png" alt="Sanchez">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        {{> footermenu }}
+        <div class="container">
+            <p>{{> footer}} <span id="current-date"></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

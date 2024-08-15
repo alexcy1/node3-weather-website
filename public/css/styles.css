@@ -1,0 +1,529 @@
+/* Reset some basic styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* General header styling */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 2px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #000;
+}
+
+/* Nav links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 8px;
+}
+
+.nav-links a:hover {
+    background: #3498db;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.nav-links li.active a {
+    background: #3498db; /* Change this to your desired active color */
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+    
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .nav-links a:hover{
+        background: #83a4d4;
+        color: #fff;
+        transition: 0.5s;
+        border-radius: 5px;
+        padding: 4px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.intro-text {
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.intro-text p{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 60px;
+}
+
+
+
+
+
+
+/* Weather FORM styling */
+.weather-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Ensure items are vertically aligned */
+}
+
+.weather-form .form-control {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.weather-form .btn-primary {
+    padding: 8px 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-bottom: 0px;  /* Adjust this value to move the button up or down */
+}
+
+.weather-form .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#refresh-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#refresh-button:active {
+    transform: rotate(360deg);
+}
+
+
+
+
+/* Weather result styling */
+#weather-result {
+    display: none;
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+#loading-spinner {
+    display: none;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px; /* Center the spinner */
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#weather-location,
+#weather-forecast {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Footer styling */
+.main-footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main-footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.logo img {
+    width: 30px;
+}
+
+
+/* Old CSS for smaller screens */
+@media (max-width: 768px) {
+    .weather-form {
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 20px;
+    }
+
+    .weather-form .form-control {
+        margin-bottom: 10px; /* Space between input and button */
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width */
+    }
+
+    .weather-form .btn-primary {
+        padding: 15px;
+        font-size: 16px;
+        width: 100%; /* Full width */
+        margin-bottom: 10px; /* Space below the button */
+    }
+
+    #weather-result {
+        margin-top: 15px; 
+        padding: 10px;
+        margin-bottom: 30px;
+  
+    }
+}
+
+
+
+/* Footer */
+.main-footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stack items on top of each other */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer menu styling */
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Space between menu and footer text */
+    padding-bottom: 5px;
+}
+
+.footer-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3498db;
+    padding: 4px;
+}
+
+.footer-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer-menu a:hover {
+    text-decoration: none;
+    text-decoration: underline;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+
+/* Footer text styling */
+.footer-container span {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Responsive layout */
+@media (min-width: 576px) {
+    .footer-container {
+        flex-direction: row; /* Align items in a row on larger screens */
+        text-align: left;
+    }
+
+    .footer-menu {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+/* Weather Image */
+.title-container {
+    display: inline-flex; /* Use inline-flex to align the image next to the title */
+    align-items: center;  /* Aligns items vertically */
+}
+
+.title-container h1 {
+    margin: 0;
+    padding-right: 20px;  /* Space between the title and the image */
+    margin-top: 10px;
+    display: inline-block; /* Ensure the title is treated as inline */
+    vertical-align: middle; /* Align vertically with the image */
+}
+
+.title-icon {
+    width: 55px;  /* Adjust the size of the image */
+    height: auto;
+    vertical-align: middle; /* Align image vertically with the title */
+}
+
+
+
+/* About Page Styling */
+.about-intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px; /* Adjust space between title and content */
+    margin-top: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+}
+
+.about-text {
+    flex: 1;
+    margin-right: -30px; /* Space between text and image */
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.about-image {
+    text-align: center; /* Centers the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.about-image img {
+    max-width: 60%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+@media (max-width: 767px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center; /* Centers items on small screens */
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 40px; /* Adds space between text and image */
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .about-intro-text {
+        align-items: center;
+    }
+}
+
+
+
+/* Help */
+.help-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto; /* Centers the container */
+}
+
+.help-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.help-container p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+
+
+/* Additional CSS for 404 page */
+.error-card {
+    margin-top: 5px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.error-message-container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.error-message {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    text-transform: uppercase;
+}
+
+.errorImage {
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 45px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.suggestion {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.suggestion a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+.suggestion a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1000px) {
+    .error-message-container {
+        flex-direction: column;
+    }
+    .errorImage {
+        margin-bottom: 20px; 
+        max-width: 260px;
+        align-items: center;
+    }
+
+    .error-card {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+}
+

@@ -1,0 +1,27 @@
+<header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <h1>Erruki Weather Forecast</h1>
+        </div>
+
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="{{#if (eq activePage 'weather')}}active{{/if}}">
+                    <a href="/">Weather</a>
+                </li>
+                <li class="{{#if (eq activePage 'about')}}active{{/if}}">
+                    <a href="/about">About</a>
+                </li>
+                <li class="{{#if (eq activePage 'help')}}active{{/if}}">
+                    <a href="/help">Help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
